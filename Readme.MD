@@ -11,18 +11,18 @@
 **v0.1 2016-1-7**
 起步
 ----
-1. **从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果。 **
+1. **从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果**
 
 2. **拷贝以下文件到工程的相应位置**
 
-    + src/com/ucas/developer/picturecarousel_android/CarouselerView.java
-    + src/com/ucas/developer/picturecarousel_android/CarouselException.java
-    + src/com/ucas/developer/picturecarousel_android/ViewPagerAdapter.java
-    + res/drawable-hdpi/dot.xml
-    + res/drawable-hdpi/dark_dot.png
-    + res/drawable-hdpi/white_dot.png
-    + res/layout/carouseler.xml
-    + libs/android-support-v4.jar
+    + `src/com/ucas/developer/picturecarousel_android/CarouselerView.java`
+    + `src/com/ucas/developer/picturecarousel_android/CarouselException.java`
+    + `src/com/ucas/developer/picturecarousel_android/ViewPagerAdapter.java`
+    + `res/drawable-hdpi/dot.xml`
+    + `res/drawable-hdpi/dark_dot.png`
+    + `res/drawable-hdpi/white_dot.png`
+    + `res/layout/carouseler.xml`
+    + `libs/android-support-v4.jar`
     
 3. **在你的Activity中使用该控件**
 
