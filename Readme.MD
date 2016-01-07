@@ -1,42 +1,58 @@
-#Í¼Æ¬ÂÖ²¥¿Ø¼şCarouselerView
-##¿Ø¼ş¹¦ÄÜ
-+ Í¼Æ¬ÂÖ²¥Õ¹Ê¾
-+ ×Ô¶¯Ñ­»·²¥·Å
-+ ºáÊúÆÁ×Ô¶¯ÊÊÅä
-##×îĞÂ°æ±¾
-v0.1 2016-1-7
-##Æğ²½
-1. ´ÓGitHubÏÂÔØ[Ô´Âë]()
-ÏÂÔØµÄÔ´Âë¾ÍÊÇÒ»¸öÍêÕûµÄ¹¤³Ì£¬×Ô´ødemo£¬¿ÉÒÔÖ±½ÓÔËĞĞ¿´Ğ§¹û¡£
-2. ¿½±´ÒÔÏÂÎÄ¼şµ½¹¤³ÌµÄÏàÓ¦Î»ÖÃ
-+ src/com/ucas/developer/picturecarousel_android/CarouselerView.java
-+ src/com/ucas/developer/picturecarousel_android/CarouselException.java
-+ src/com/ucas/developer/picturecarousel_android/ViewPagerAdapter.java
-+ res/drawable-hdpi/dot.xml
-+ res/drawable-hdpi/dark_dot.png
-+ res/drawable-hdpi/white_dot.png
-+ res/layout/carouseler.xml
-+ libs/android-support-v4.jar
-3. ÔÚÄãµÄActivityÖĞÊ¹ÓÃ¸Ã¿Ø¼ş
-Ê¹ÓÃ·½·¨£º
-ÔÚxml²¼¾ÖÖĞÖ±½ÓÊ¹ÓÃ±¾¿Ø¼ş
-`
-<com.ucas.developer.picturecarousel_android.CarouselerView
-	android:id="@+id/carouseler"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent" />
-`
-²¢ÔÚActivityÖĞ»ñÈ¡µ½¸Ã¿Ø¼ş
-`carouselerView = (CarouselerView) findViewById(R.id.carouseler);`
-È»ºóÎªÆäÉèÖÃÍ¼Æ¬×ÊÔ´£¬ÒÔËÄ¸öÍ¼Æ¬ÎªÀı
-`
-ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>();
-bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic1));
-bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic2));
-bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic3));
-bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic4));
-carouselerView.setImageResources(bitmaps);
-`
-Ö®ºó¿ÉÒÔÑ¡ÔñĞÔµÄÉèÖÃÊÇ·ñ¿ªÆô»ò¹Ø±Õ×Ô¶¯²¥·Å£¬Ä¬ÈÏ¿ªÆô£¬Èô²»Ïë¿ªÆô£¬Ö»Ğèµ÷ÓÃÈçÏÂ·½·¨´«Èë²ÎÊıfalse¼´¿É
-`carouselerView.setAutoSlide(false);`
-4. ÔËĞĞÄãµÄ³ÌĞòÊÔÊÔ°É~
+å›¾ç‰‡è½®æ’­æ§ä»¶CarouselerView
+==========================
+æ§ä»¶åŠŸèƒ½
+--------------
++ **å›¾ç‰‡è½®æ’­å±•ç¤º**
++ **è‡ªåŠ¨å¾ªç¯æ’­æ”¾**
++ **æ¨ªç«–å±è‡ªåŠ¨é€‚é…**
+
+æœ€æ–°ç‰ˆæœ¬
+-------
+**v0.1 2016-1-7**
+
+æ•ˆæœå±•ç¤º
+--------
+![æ§ä»¶å®é™…æ•ˆæœ](https://github.com/jingedawang/Resources/blob/master/recording.gif?raw=true)
+
+èµ·æ­¥
+----
+1. **ä»GitHubä¸‹è½½[æºç ](),ä¸‹è½½çš„æºç å°±æ˜¯ä¸€ä¸ªå®Œæ•´çš„å·¥ç¨‹ï¼Œè‡ªå¸¦demoï¼Œå¯ä»¥ç›´æ¥è¿è¡Œçœ‹æ•ˆæœ**
+
+2. **æ‹·è´ä»¥ä¸‹æ–‡ä»¶åˆ°å·¥ç¨‹çš„ç›¸åº”ä½ç½®**
+
+    + `src/com/ucas/developer/picturecarousel_android/CarouselerView.java`
+    + `src/com/ucas/developer/picturecarousel_android/CarouselException.java`
+    + `src/com/ucas/developer/picturecarousel_android/ViewPagerAdapter.java`
+    + `res/drawable-hdpi/dot.xml`
+    + `res/drawable-hdpi/dark_dot.png`
+    + `res/drawable-hdpi/white_dot.png`
+    + `res/layout/carouseler.xml`
+    + `libs/android-support-v4.jar`
+    
+3. **åœ¨ä½ çš„Activityä¸­ä½¿ç”¨è¯¥æ§ä»¶**
+
+    åœ¨xmlå¸ƒå±€ä¸­ç›´æ¥ä½¿ç”¨æœ¬æ§ä»¶
+    
+        <com.ucas.developer.picturecarousel_android.CarouselerView
+            android:id="@+id/carouseler"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent" />
+    
+    å¹¶åœ¨Activityä¸­è·å–åˆ°è¯¥æ§ä»¶
+    
+        carouselerView = (CarouselerView) findViewById(R.id.carouseler);
+    
+    ç„¶åä¸ºå…¶è®¾ç½®å›¾ç‰‡èµ„æºï¼Œä»¥å››ä¸ªå›¾ç‰‡ä¸ºä¾‹
+    
+        ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>();
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic1));
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic2));
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic3));
+        bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.pic4));
+        carouselerView.setImageResources(bitmaps);
+    
+    ä¹‹åå¯ä»¥é€‰æ‹©æ€§çš„è®¾ç½®æ˜¯å¦å¼€å¯æˆ–å…³é—­è‡ªåŠ¨æ’­æ”¾ï¼Œé»˜è®¤å¼€å¯ï¼Œè‹¥ä¸æƒ³å¼€å¯ï¼Œåªéœ€è°ƒç”¨å¦‚ä¸‹æ–¹æ³•ä¼ å…¥å‚æ•°falseå³å¯
+    
+        carouselerView.setAutoSlide(false);
+        
+4. **è¿è¡Œä½ çš„ç¨‹åºè¯•è¯•å§~**
