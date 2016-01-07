@@ -9,6 +9,11 @@
 最新版本
 -------
 **v0.1 2016-1-7**
+
+效果展示
+--------
+![控件实际效果](http://d.pcs.baidu.com/thumbnail/32be4a76a00f8249c25a442189e880bc?fid=2300734070-250528-616526256315670&time=1452153600&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZgUz%2F4waK2v%2FhalUvXKNvILV5ug%3D&rt=sh&expires=2h&r=962719008&sharesign=unknown&size=c710_u500&quality=100)
+
 起步
 ----
 1. **从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果**
