@@ -2,18 +2,18 @@
 ==========================
 控件功能
 --------------
-+ 图片轮播展示
-+ 自动循环播放
-+ 横竖屏自动适配
++ **图片轮播展示**
++ **自动循环播放**
++ **横竖屏自动适配**
 
 最新版本
 -------
-v0.1 2016-1-7
+**v0.1 2016-1-7**
 起步
 ----
-1. 从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果。 
+1. **从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果。 **
 
-2. 拷贝以下文件到工程的相应位置
+2. **拷贝以下文件到工程的相应位置**
 
     + src/com/ucas/developer/picturecarousel_android/CarouselerView.java
     + src/com/ucas/developer/picturecarousel_android/CarouselException.java
@@ -24,14 +24,14 @@ v0.1 2016-1-7
     + res/layout/carouseler.xml
     + libs/android-support-v4.jar
     
-3. 在你的Activity中使用该控件
+3. **在你的Activity中使用该控件**
 
     在xml布局中直接使用本控件
     
-    <com.ucas.developer.picturecarousel_android.CarouselerView
-        android:id="@+id/carouseler"
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent" />
+        <com.ucas.developer.picturecarousel_android.CarouselerView
+            android:id="@+id/carouseler"
+    	    android:layout_width="match_parent"
+    	    android:layout_height="match_parent" />
     
     并在Activity中获取到该控件
     
@@ -50,4 +50,4 @@ v0.1 2016-1-7
     
         carouselerView.setAutoSlide(false);
         
-4. 运行你的程序试试吧~
+4. **运行你的程序试试吧~**
