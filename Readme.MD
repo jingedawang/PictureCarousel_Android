@@ -60,3 +60,7 @@
 文档
 ----
 详细文档说明参见`doc/index.html`
+
+其它版本
+--------
+[iOS版本](https://github.com/mingjiameng/LZP_PictureCarousel.git) 由[梁志鹏*-简书*](http://www.jianshu.com/users/d68767f43bf1/latest_articles)开发
