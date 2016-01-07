@@ -61,6 +61,17 @@
 ----
 详细文档说明参见`doc/index.html`
 
+作者信息
+--------
+**金戈大王**
+
+邮箱：wjg172184@163.com<br>
+新浪微博：[http://weibo.com/u/2503136032](http://weibo.com/u/2503136032)<br>
+CSDN博客：[http://blog.csdn.net/u010829418](http://blog.csdn.net/u010829418)<br>
+简书：[http://www.jianshu.com/users/8a84489c965c](http://www.jianshu.com/users/8a84489c965c)
+
+欢迎来访交流~
+
 其它版本
 --------
 [iOS版本](https://github.com/mingjiameng/LZP_PictureCarousel.git) 由[梁志鹏*-简书*](http://www.jianshu.com/users/d68767f43bf1/latest_articles)开发
