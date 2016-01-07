@@ -16,7 +16,7 @@
 
 起步
 ----
-1. **从GitHub下载[源码](),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果**
+1. **从GitHub下载[源码](https://github.com/jingedawang/PictureCarousel_Android),下载的源码就是一个完整的工程，自带demo，可以直接运行看效果**
 
 2. **拷贝以下文件到工程的相应位置**
 
