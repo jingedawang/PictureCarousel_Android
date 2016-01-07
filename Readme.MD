@@ -56,3 +56,7 @@
         carouselerView.setAutoSlide(false);
         
 4. **运行你的程序试试吧~**
+
+文档
+----
+详细文档说明参见`doc/index.html`
