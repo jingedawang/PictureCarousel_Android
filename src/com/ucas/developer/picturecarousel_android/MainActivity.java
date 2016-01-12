@@ -7,9 +7,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.Toast;
+
+import com.ucas.developer.picturecarousel_android.CarouselerView.CarouselerViewListener;
 
 public class MainActivity extends Activity {
 
@@ -20,29 +20,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button start = (Button) findViewById(R.id.button1);
-		Button stop = (Button) findViewById(R.id.btn_autoSlide);
-		start.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				carouselerView.setAutoSlide(true);
-			}
-		});
-		stop.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				carouselerView.setAutoSlide(false);
-			}
-		});
-		
 		carouselerView = (CarouselerView) findViewById(R.id.carouseler);
 		ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>();
 		bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.faye));
 		bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.faye1));
 		bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.faye2));
 		bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.faye3));
-		carouselerView.setImageResources(bitmaps);
-		carouselerView.setAutoSlide(false);
+		carouselerView.setImageResources(bitmaps, new CarouselerViewListener() {
+			@Override
+			public void onImageClick(int position, View imageView) {
+				//在此写图片单击事件
+				Toast.makeText(getApplicationContext(), "第"+position+"张图片", Toast.LENGTH_SHORT).show();
+			}
+		});
 	}
 	
 }

@@ -64,7 +64,7 @@ public class CarouselerView extends LinearLayout {
 	/*
 	 * Listener interface, which you can implement to handle onClick event of the images
 	 */
-	private interface CarouselerViewListener {
+	public interface CarouselerViewListener {
 		void onImageClick(int position, View imageView);
 	}
 	
@@ -155,7 +155,7 @@ public class CarouselerView extends LinearLayout {
 	/*
 	 * Set images to this view. Pass a CarouselerViewListener to this view. After this method finished, the images will show, and click event enables.
 	 */
-	private void setImageResources(final ArrayList<Bitmap> bitmaps, CarouselerViewListener carouselerViewListener) {
+	public void setImageResources(final ArrayList<Bitmap> bitmaps, CarouselerViewListener carouselerViewListener) {
 		
 		this.bitmaps = bitmaps;
 		
@@ -202,7 +202,7 @@ public class CarouselerView extends LinearLayout {
 		});
 		
 		//为多个图片同时显示在viewPager中做准备，主要是显示超出控件的部分和touch事件分发
-		viewPagerAdapter = new ViewPagerAdapter(views);
+		viewPagerAdapter = new ViewPagerAdapter(views, carouselerViewListener);
 		viewPager.setAdapter(viewPagerAdapter);
 		viewPager.setOffscreenPageLimit(3);
 		viewPager.setPageMargin(10);
