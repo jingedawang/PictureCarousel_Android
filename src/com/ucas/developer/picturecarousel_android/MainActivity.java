@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 				Toast.makeText(getApplicationContext(), "第"+position+"张图片", Toast.LENGTH_SHORT).show();
 			}
 		});
+		carouselerView.setAutoSlide(false);
 	}
 	
 }

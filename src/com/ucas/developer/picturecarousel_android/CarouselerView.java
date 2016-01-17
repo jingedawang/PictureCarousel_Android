@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -311,6 +312,8 @@ public class CarouselerView extends LinearLayout {
 		@Override
 		public void onPageScrolled(int scrolledPosition, float percent, int pixels) {
 
+			Log.d("scroll", "position=" + scrolledPosition + "\tpercent=" + percent);
+			
 		}
 
 		@Override
