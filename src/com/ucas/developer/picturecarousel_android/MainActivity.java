@@ -20,21 +20,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button start = (Button) findViewById(R.id.button1);
-		Button stop = (Button) findViewById(R.id.btn_autoSlide);
-		start.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				carouselerView.setAutoSlide(true);
-			}
-		});
-		stop.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				carouselerView.setAutoSlide(false);
-			}
-		});
-		
 		carouselerView = (CarouselerView) findViewById(R.id.carouseler);
 		ArrayList<Bitmap> bitmaps = new ArrayList<Bitmap>();
 		bitmaps.add(BitmapFactory.decodeResource(getResources(), R.drawable.faye));

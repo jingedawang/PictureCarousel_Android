@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -293,24 +294,18 @@ public class CarouselerView extends LinearLayout {
 
 		@Override
 		public void onPageScrollStateChanged(int state) {
-			if (state == ViewPager.SCROLL_STATE_IDLE) {
-				if (currentPosition == views.size() - 1) {
-					viewPager.setCurrentItem(1, false);
-					setCurDot(0);
-				}
-				else if (currentPosition == 0) {
-					viewPager.setCurrentItem(views.size() - 2, false);
-					setCurDot(bitmaps.size() - 1);
-				}
-				else {
-					setCurDot(currentPosition - 1);
-				}
-			}
 		}
 
 		@Override
 		public void onPageScrolled(int scrolledPosition, float percent, int pixels) {
-
+			Log.d("scroll", "position=" + scrolledPosition + "   percent=" + percent);
+			//此处巧妙的实现了页面的平滑循环过渡。非常感谢CSDN的博主——正逍遥0716的指点，弥补了我之前存留的bug。
+			if (scrolledPosition == 0 && percent == 0) {
+				viewPager .setCurrentItem(views.size() - 2, false);
+			}
+            else if (scrolledPosition == views.size() - 1 && percent == 0) {
+            	viewPager .setCurrentItem(1, false);
+            }
 		}
 
 		@Override
