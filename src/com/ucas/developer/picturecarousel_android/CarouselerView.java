@@ -206,7 +206,10 @@ public class CarouselerView extends LinearLayout {
 		viewPagerAdapter = new ViewPagerAdapter(views);
 		viewPager.setAdapter(viewPagerAdapter);
 		viewPager.setOffscreenPageLimit(3);
-		viewPager.setPageMargin(10);
+		//如果有这句话，不用横屏，在我的百度云os上就已经无法滑动了。
+		//原因、解决方法你可以参看这个：http://www.cnrui.cn/blog/article.asp?id=275，应该是Android本身的坑（Android中这种坑比方法应该见怪不怪了把）我没空深究。
+		//我是查看log信息得出的结论，你可以仔细看看，在滑动到你的第三张图片是Offset已经异常（没有0出现）了，这时你继续滑动会偏移量越来越离谱，最后甚至会出现E的N次方这样的数字。
+		//viewPager.setPageMargin(10);
 		rtvContainer.setOnTouchListener(new OnTouchListener() {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
